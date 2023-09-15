@@ -2,7 +2,7 @@ import { useStorage } from "@plasmohq/storage/hook"
 
 function IndexPopup() {
 
-  const [isShow, setIsShow] = useStorage("enableFlg", (v) => v === undefined ? false: v)
+  const [isShow, setIsShow] = useStorage("enableFlg", false)
 
   const showCotent = () => {
     setIsShow(!isShow)
