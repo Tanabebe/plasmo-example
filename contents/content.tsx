@@ -18,7 +18,7 @@ const Content = () => {
 
   const onClickHandler = async (event) => {
     const response = await sendToBackground({
-      name: "ping",
+      name: "example",
       body: {
         id: inputValue,
       }
