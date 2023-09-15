@@ -13,6 +13,7 @@ const Content = () => {
 
   const onInputHandler = (event) => {
     setInputValue(event.target.value)
+    console.log(inputValue)
   }
 
   const onClickHandler = async (event) => {
@@ -31,13 +32,13 @@ const Content = () => {
       ? <div style={{
         position: "fixed",
         bottom: 0,
-        padding: 5,
+        padding: 10,
         backgroundColor: "red",
       }}>
           <h1>Example Content UI</h1>
           <input value={inputValue} onChange={onInputHandler}/>
           <button onClick={onClickHandler}>Send Message to Background</button>
-          <p>{responseValue}</p>
+          <p>Background Response Value: {responseValue}</p>
         </div>
       : null
     }
